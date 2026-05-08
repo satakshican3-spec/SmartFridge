@@ -1,5 +1,6 @@
 import streamlit as st
 from datetime import datetime, timedelta
+import random
 
 st.set_page_config(page_title="SmartFridge", layout="wide")
 st.title("SmartFridge: Waste-Less Kitchen")
