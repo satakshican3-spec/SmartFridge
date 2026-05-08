@@ -4,6 +4,16 @@ from datetime import datetime, timedelta
 st.set_page_config(page_title="SmartFridge", layout="wide")
 st.title("SmartFridge: Waste-Less Kitchen")
 
+sustainability_quotes = [
+    "Buy only what you need, eat what you buy.",
+    "Waste not, want not.",
+    "Small acts, when multiplied by millions of people, can transform the world.",
+    "Respect for food is a respect for life.",
+    "The best way to reduce waste is to not create it."
+]
+st.write(f"*\"{random.choice(sustainability_quotes)}\"*")
+st.write("---")
+
 SHELF_LIFE = {
     "Milk": 7, "Eggs": 21, "Bread": 5, "Apples": 14,
     "Spinach": 4, "Chicken": 3, "Beef": 3, "Yogurt": 14,
