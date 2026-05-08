@@ -1,8 +1,8 @@
 import streamlit as st
 from datetime import datetime, timedelta
 
-st.set_page_config(page_title="ScrapChef", layout="wide")
-st.title("ScrapChef: Waste-Less Kitchen")
+st.set_page_config(page_title="SmartFridge", layout="wide")
+st.title("SmartFridge: Waste-Less Kitchen")
 
 SHELF_LIFE = {
     "Milk": 7, "Eggs": 21, "Bread": 5, "Apples": 14,
