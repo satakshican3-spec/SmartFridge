@@ -48,7 +48,7 @@ col_m3.metric("Kitchen Status", "Active")
 
 st.write("---")
 
-col_inv, col_recipes = st.columns()
+col_inv, col_recipes = st.columns(2)
 
 with col_inv:
     st.subheader("Virtual Inventory")
