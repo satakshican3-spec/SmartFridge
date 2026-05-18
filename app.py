@@ -55,13 +55,16 @@ with col_inv:
     if not st.session_state.inventory:
         st.info("Your fridge is empty. Log items in the sidebar.")
     else:
+        today_date = datetime.now().date()
+
         st.session_state.inventory.sort(key=lambda x: x['Expiry'])
+
         for idx, food in enumerate(st.session_state.inventory):
             exp_date = datetime.strptime(food['Expiry'], "%Y-%m-%d").date()
-            
-            if exp_date < today:
+
+            if exp_date < today_date:
                 color, label = "red", "EXPIRED"
-            elif today <= exp_date <= (today + timedelta(days=2)):
+            elif today_date <= exp_date <= (today_date + timedelta(days=2)):
                 color, label = "orange", "USE SOON"
             else:
                 color, label = "green", "FRESH"
