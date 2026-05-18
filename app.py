@@ -21,7 +21,7 @@ with st.sidebar.form("add_food", clear_on_submit=True):
     else:
         food_item = food_choice
 
-    expiry_date = st.date_input("Expiry Data", value=datetime.now() + timedelata(days=7))
+    expiry_date = st.date_input("Expiry Data", value=datetime.now() + timedelta(days=7))
 
     if st.form_submit_button("Add to Fridge"):
         if food_item:
